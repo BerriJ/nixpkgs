@@ -4763,6 +4763,8 @@ self: super: with self; {
 
   entrypoints = callPackage ../development/python-modules/entrypoints { };
 
+  entsoe-apy = callPackage ../development/python-modules/entsoe-apy { };
+
   enturclient = callPackage ../development/python-modules/enturclient { };
 
   env-canada = callPackage ../development/python-modules/env-canada { };
@@ -20375,6 +20377,8 @@ self: super: with self; {
   xs1-api-client = callPackage ../development/python-modules/xs1-api-client { };
 
   xsdata = callPackage ../development/python-modules/xsdata { };
+
+  xsdata-pydantic = callPackage ../development/python-modules/xsdata-pydantic { };
 
   xstatic = callPackage ../development/python-modules/xstatic { };
 
