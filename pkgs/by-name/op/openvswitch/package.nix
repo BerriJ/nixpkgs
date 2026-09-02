@@ -139,7 +139,10 @@ stdenv.mkDerivation (finalAttrs: {
     pyparsing
     pytest
     setuptools
-  ]);
+    tftpy
+  ])
+  # pyftpdlib depends on pysendfile extension, which cannot be static
+  ++ lib.optionals (!stdenv.hostPlatform.isStatic) [ python3.pkgs.pyftpdlib ];
 
   passthru = {
     tests = {
